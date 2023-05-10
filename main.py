@@ -1,8 +1,9 @@
 def main():
     print('Connecting to Database...')
-    mysql.connect(user='Sean', password='My$eCr3tP@ssw0rd',
-                  host='140.113.168.160',
-                  database='crawler')
+    mysql.connect(user=env.DB_USER,
+                  password=DB_PASSWORD,
+                  host=env.DB_HOST,
+                  database=env.DB_DATABASE)
 
 
 if __name__ == '__main__':
