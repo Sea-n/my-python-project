@@ -5,7 +5,7 @@ def main():
                          host=env.DB_HOST,
                          database=env.DB_DATABASE)
     conn.query('SELECT * FROM data LIMIT 5')
-    conn.query("INSERT data VALUES ('name', 'Sean')")
+    conn.query("INSERT data VALUES ('name', ':value')", data={'value': 'Sean'})
 
 
 if __name__ == '__main__':
